@@ -1,0 +1,213 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>6.1</ProjectVersion>
+    <ToolchainName>com.Atmel.AVRGCC8.C</ToolchainName>
+    <ProjectGuid>{218b2950-1be9-497d-a3a8-ea59220d0f0f}</ProjectGuid>
+    <avrdevice>ATmega2560</avrdevice>
+    <avrdeviceseries>none</avrdeviceseries>
+    <OutputType>Executable</OutputType>
+    <Language>C</Language>
+    <OutputFileName>$(MSBuildProjectName)</OutputFileName>
+    <OutputFileExtension>.elf</OutputFileExtension>
+    <OutputDirectory>$(MSBuildProjectDirectory)\$(Configuration)</OutputDirectory>
+    <AssemblyName>ILI9481_Libs</AssemblyName>
+    <Name>ILI9481_Libs</Name>
+    <RootNamespace>ILI9481_Libs</RootNamespace>
+    <ToolchainFlavour>Native</ToolchainFlavour>
+    <KeepTimersRunning>true</KeepTimersRunning>
+    <OverrideVtor>false</OverrideVtor>
+    <CacheFlash>true</CacheFlash>
+    <ProgFlashFromRam>true</ProgFlashFromRam>
+    <RamSnippetAddress>0x20000000</RamSnippetAddress>
+    <UncachedRange />
+    <OverrideVtorValue>exception_table</OverrideVtorValue>
+    <BootSegment>2</BootSegment>
+    <eraseonlaunchrule>0</eraseonlaunchrule>
+    <AsfFrameworkConfig>
+      <framework-data>
+        <options />
+        <configurations />
+        <files />
+        <documentation help="" />
+        <offline-documentation help="" />
+        <dependencies>
+          <content-extension eid="atmel.asf" uuidref="Atmel.ASF" version="3.3.0" />
+        </dependencies>
+      </framework-data>
+    </AsfFrameworkConfig>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <ToolchainSettings>
+      <AvrGcc>
+        <avrgcc.common.optimization.RelaxBranches>True</avrgcc.common.optimization.RelaxBranches>
+        <avrgcc.common.outputfiles.hex>True</avrgcc.common.outputfiles.hex>
+        <avrgcc.common.outputfiles.lss>True</avrgcc.common.outputfiles.lss>
+        <avrgcc.common.outputfiles.eep>True</avrgcc.common.outputfiles.eep>
+        <avrgcc.common.outputfiles.srec>True</avrgcc.common.outputfiles.srec>
+        <avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>True</avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>
+        <avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>True</avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>
+        <avrgcc.compiler.symbols.DefSymbols>
+          <ListValues>
+            <Value>NDEBUG</Value>
+          </ListValues>
+        </avrgcc.compiler.symbols.DefSymbols>
+        <avrgcc.compiler.optimization.level>Optimize for size (-Os)</avrgcc.compiler.optimization.level>
+        <avrgcc.compiler.optimization.PackStructureMembers>True</avrgcc.compiler.optimization.PackStructureMembers>
+        <avrgcc.compiler.optimization.AllocateBytesNeededForEnum>True</avrgcc.compiler.optimization.AllocateBytesNeededForEnum>
+        <avrgcc.compiler.warnings.AllWarnings>True</avrgcc.compiler.warnings.AllWarnings>
+        <avrgcc.linker.libraries.Libraries>
+          <ListValues>
+            <Value>libm</Value>
+          </ListValues>
+        </avrgcc.linker.libraries.Libraries>
+      </AvrGcc>
+    </ToolchainSettings>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <ToolchainSettings>
+      <AvrGcc>
+        <avrgcc.common.optimization.RelaxBranches>True</avrgcc.common.optimization.RelaxBranches>
+        <avrgcc.common.outputfiles.hex>True</avrgcc.common.outputfiles.hex>
+        <avrgcc.common.outputfiles.lss>True</avrgcc.common.outputfiles.lss>
+        <avrgcc.common.outputfiles.eep>True</avrgcc.common.outputfiles.eep>
+        <avrgcc.common.outputfiles.srec>True</avrgcc.common.outputfiles.srec>
+        <avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>True</avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>
+        <avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>True</avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>
+        <avrgcc.compiler.symbols.DefSymbols>
+          <ListValues>
+            <Value>DEBUG</Value>
+          </ListValues>
+        </avrgcc.compiler.symbols.DefSymbols>
+        <avrgcc.compiler.optimization.level>Optimize (-O1)</avrgcc.compiler.optimization.level>
+        <avrgcc.compiler.optimization.PackStructureMembers>True</avrgcc.compiler.optimization.PackStructureMembers>
+        <avrgcc.compiler.optimization.AllocateBytesNeededForEnum>True</avrgcc.compiler.optimization.AllocateBytesNeededForEnum>
+        <avrgcc.compiler.optimization.DebugLevel>Default (-g2)</avrgcc.compiler.optimization.DebugLevel>
+        <avrgcc.compiler.warnings.AllWarnings>True</avrgcc.compiler.warnings.AllWarnings>
+        <avrgcc.linker.libraries.Libraries>
+          <ListValues>
+            <Value>libm</Value>
+          </ListValues>
+        </avrgcc.linker.libraries.Libraries>
+        <avrgcc.assembler.debugging.DebugLevel>Default (-Wa,-g)</avrgcc.assembler.debugging.DebugLevel>
+      </AvrGcc>
+    </ToolchainSettings>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Fat\diskio.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Fat\diskio.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Fat\ff.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Fat\ff.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Fat\ffconf.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Fat\integer.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="ILI9481_Libs.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Libs\Application\Demo_App.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Libs\Application\Demo_App.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Libs\Application\Terminal.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Libs\Application\Terminal.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Libs\Atmega_Libs\AtmegaPins.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Libs\Atmega_Libs\Macros_Functions.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Libs\Atmega_Libs\Macros_Functions.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Libs\Atmega_Libs\Serial_Atmel328p.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Libs\Atmega_Libs\Serial_Atmel328p.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Libs\Atmega_Libs\SPI.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Libs\Atmega_Libs\SPI.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Libs\LCD_Libs\ArialFont.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Libs\LCD_Libs\Draw_Bitmap.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Libs\LCD_Libs\Draw_Bitmap.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Libs\LCD_Libs\font.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Libs\LCD_Libs\ILI9481.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Libs\LCD_Libs\ILI9481.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Libs\LCD_Libs\LCD_Config.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Libs\LCD_Libs\LCD_Draw.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Libs\LCD_Libs\LCD_Draw.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Libs\LCD_Libs\ST7735_SPI.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Libs\LCD_Libs\ST7735_SPI.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Libs\LCD_Libs\UTouch.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Libs\LCD_Libs\UTouch.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Libs\LCD_Libs\_SSD1289.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Libs\LCD_Libs\_SSD1289.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Libs\SD\uSD_Card.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Libs\SD\uSD_Card.h">
+      <SubType>compile</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Libs" />
+    <Folder Include="Libs\Application" />
+    <Folder Include="Libs\Atmega_Libs" />
+    <Folder Include="Libs\LCD_Libs" />
+    <Folder Include="Libs\SD" />
+    <Folder Include="Fat" />
+  </ItemGroup>
+  <Import Project="$(AVRSTUDIO_EXE_PATH)\\Vs\\Compiler.targets" />
+</Project>

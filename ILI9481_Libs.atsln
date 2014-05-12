@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Atmel Studio Solution File, Format Version 11.00
+Project("{54F91283-7BC4-4236-8FF9-10F437C3AD48}") = "ILI9481_Libs", "ILI9481_Libs\ILI9481_Libs.cproj", "{218B2950-1BE9-497D-A3A8-EA59220D0F0F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|AVR = Debug|AVR
+		Release|AVR = Release|AVR
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{218B2950-1BE9-497D-A3A8-EA59220D0F0F}.Debug|AVR.ActiveCfg = Debug|AVR
+		{218B2950-1BE9-497D-A3A8-EA59220D0F0F}.Debug|AVR.Build.0 = Debug|AVR
+		{218B2950-1BE9-497D-A3A8-EA59220D0F0F}.Release|AVR.ActiveCfg = Release|AVR
+		{218B2950-1BE9-497D-A3A8-EA59220D0F0F}.Release|AVR.Build.0 = Release|AVR
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
